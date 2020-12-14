@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-12-14T23:26:09.457Z",
-    "end": "2020-12-14T23:26:24.544Z",
-    "duration": 15087,
+    "start": "2020-12-14T23:32:51.921Z",
+    "end": "2020-12-14T23:33:10.718Z",
+    "duration": 18797,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9bc9f98a-0f38-4750-9af2-3a78c05a094c",
+      "uuid": "675e2d25-da7d-41cc-ab9b-1a4e4d4b1897",
       "title": "",
       "fullFile": "cypress/integration/compra.spec.js",
       "file": "cypress/integration/compra.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a6045053-6a93-43c8-97ae-e5c46d014552",
+          "uuid": "3cd55ce8-6b9c-4606-866a-8e5527ec330f",
           "title": "Compra",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Efetuar uma compra de produto",
               "fullTitle": "Compra Efetuar uma compra de produto",
               "timedOut": null,
-              "duration": 14992,
+              "duration": 18716,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit('/');\nvar nomeProduto = 'Faded Short Sleeve T-shirts';\ncy.contains(nomeProduto).trigger('mouseover');\ncy.contains(nomeProduto).parent().siblings('div.button-container').children('a').first().click(); //Validando se o produto foi adicionado com sucesso\ncy.get('.icon-ok').parent() //h2\n.should('contain.text', 'Product successfully added to your shopping cart');\ncy.get('span#layer_cart_product_title').should('contain.text', nomeProduto);\ncy.get(\".button-container a[href$='controller=order']\").click();\ncy.get(\".cart_navigation a[href$='order&step=1']\").click(); // cy.get('#email').type('test0912@mail.com')\n// cy.get('#passwd').type('123456')\n// cy.get('button#SubmitLogin').click()\n//Validando se o endereco de entega é igual o de cobranca\n//assercao | atributo | valor\ncy.get('[type=checkbox]#addressesAreEquals').should('have.attr', 'checked');\ncy.get('[type=checkbox]#addressesAreEquals').should('have.attr', 'name', 'same');\ncy.get('button[name=processAddress').click();\ncy.get('[type=checkbox]#cgv').check();\ncy.get('button[name=processCarrier').click();\ncy.get('.bankwire').click();\ncy.get(\".cart_navigation button[type=submit]\").find('span').contains('I confirm my order').click();\ncy.get('.cheque-indent strong').should('contain.text', 'Your order on My Store is complete.');\ncy.get('div.box').invoke('text').then(function (text) {\n  console.log(text);\n  console.log(text.match(/[A-Z][A-Z]+/g)[1]);\n  cy.writeFile('cypress/fixtures/pedido.json', {\n    id: \"\".concat(text.match(/[A-Z][A-Z]+/g)[1])\n  });\n});\ncy.get(\".cart_navigation a[href$='history']\").click();\ncy.readFile('cypress/fixtures/pedido.json').then(function (pedido) {\n  cy.get('tr.first_item .history_link a').should('contain.text', pedido.id);\n});",
               "err": {},
-              "uuid": "99329287-a283-4398-88d3-8d078fd79f18",
-              "parentUUID": "a6045053-6a93-43c8-97ae-e5c46d014552",
+              "uuid": "467c6b0f-2be6-43dc-9557-8a291b5bebc0",
+              "parentUUID": "3cd55ce8-6b9c-4606-866a-8e5527ec330f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "99329287-a283-4398-88d3-8d078fd79f18"
+            "467c6b0f-2be6-43dc-9557-8a291b5bebc0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14992,
+          "duration": 18716,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
