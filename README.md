@@ -1,6 +1,6 @@
 ## Cypress UI
 
-Sample project using Cypress to automate UI,using awesome-report and integrated in CI.
+Sample project using Cypress to automate UI,using awesome-report integrated in CI (report is available in [here](https://clarissaar.github.io/cypress-semana-agilizei/)).
 
 ### Requirements
 
